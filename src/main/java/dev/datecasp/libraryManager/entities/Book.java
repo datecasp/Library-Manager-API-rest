@@ -32,7 +32,78 @@ public class Book
     @Column(name = "avaliable")
     private Boolean avaliable; //If the book is choosable to lend
 
+    //Constructors
 
+    public Book()
+    {
+    }
 
+    public Book(String tittle, String author, Enumerations.categories category)
+    {
+        this.tittle = tittle;
+        this.author = author;
+        this.category = category;
+        this.avaliable = true;
+    }
 
+    //Getters and Setters
+
+    public Long getBookId()
+    {
+        return bookId;
+    }
+
+    public String getTittle()
+    {
+        return tittle;
+    }
+
+    public void setTittle(String tittle)
+    {
+        this.tittle = tittle;
+    }
+
+    public String getAuthor()
+    {
+        return author;
+    }
+
+    public void setAuthor(String author)
+    {
+        this.author = author;
+    }
+
+    public Enumerations.categories getCategory()
+    {
+        return category;
+    }
+
+    public void setCategory(Enumerations.categories category)
+    {
+        this.category = category;
+    }
+
+    public Boolean getAvaliable()
+    {
+        return avaliable;
+    }
+
+    public void setAvaliable(Boolean avaliable)
+    {
+        this.avaliable = avaliable;
+    }
+
+    //ToString()
+
+    @Override
+    public String toString()
+    {
+        return "Book{" +
+                "bookId=" + bookId +
+                ", tittle='" + tittle + '\'' +
+                ", author='" + author + '\'' +
+                ", category=" + category +
+                ", avaliable=" + avaliable +
+                '}';
+    }
 }
