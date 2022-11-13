@@ -36,17 +36,5 @@ public class BookController
     public ResponseEntity<List<Book>> getAllBooks ()
     {
         return ResponseEntity.ok(bookService.findAll());
-//        Optional<List<Book>> bookOpt = Optional.of(bookRepository.findAll());
-//        List<Book> bookList = new ArrayList<>();
-//
-//        if(bookOpt.isPresent())
-//        {
-//            for(Book book : bookOpt.get())
-//            {
-//                bookList.add(book);
-//            }
-//            return ResponseEntity.ok(bookList);
-//        }
-//        return ResponseEntity.noContent().build();
     }
 }
